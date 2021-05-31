@@ -185,7 +185,7 @@ func NewService(
 	serviceResource, err := resource.New(
 		params,
 		common.FrontendServiceName,
-		&resource.Config{
+		&dynamicconfig.ResourceConfig{
 			PersistenceMaxQPS:       serviceConfig.PersistenceMaxQPS,
 			PersistenceGlobalMaxQPS: serviceConfig.PersistenceGlobalMaxQPS,
 			ThrottledLoggerMaxRPS:   serviceConfig.ThrottledLogRPS,
